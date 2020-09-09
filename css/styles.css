@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Recursive:wght@300;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    min-height: 72px;
+}
+
+nav li a {
+    color: #253237;
+}
+    nav li a:hover {
+        background-color: #9DB4C0;
+        opacity: 0.8;
+        border-radius: 20px;
+    }
+
+.navbar-toggler {
+    border: none;
+}
+
+.hero {
+    background-image: url(../img/470_05284.jpg);
+    background-size: cover;
+    padding-top: 72px;
+    min-height: 650px;
+
+}
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+
+/***** MEDIA QUERIES *****/
+/* Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) 
+@media (min-width: 576px) { 
+    ... 
+}
+
+*/
+
+/* Medium devices (tablets, 768px and up) 
+@media (min-width: 768px) { 
+    ... 
+}
+*/
+
+/* Large devices (desktops, 992px and up) 
+@media (min-width: 992px) { 
+    ... 
+}
+*/
+
+/* Extra large devices (large desktops, 1200px and up) 
+@media (min-width: 1200px) { 
+    ... 
+}
+*/

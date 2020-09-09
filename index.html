@@ -30,7 +30,7 @@
             </form>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navlinks">
             <ul class="navbar-nav ml-auto">
@@ -69,24 +69,224 @@
       </nav>
     </header>
     <main class="container-fluid">
-      <section>
-
+      <!-- INICI HERO -->
+      <section class="hero">
+        <div class="container">
+          <h2 class="display-2 text-white">Text display</h2>
+          <h3 class="display-4 text-light">Subtext display</h3>
+        </div> <!-- div container -->
       </section>
+      <!-- INICI SEARCHBAR -->
       <section class="container">
+        <div class="row">
+          <div class="content-center py-5">
+            <form class="form-inline">
+              <label class="sr-only" for="inlineFormInputName2">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+            
+              <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+              <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+              </div>
+            
+              <div class="form-check mb-2 mr-sm-2">
+                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                <label class="form-check-label" for="inlineFormCheck">
+                  Remember me
+                </label>
+              </div>
         
+              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>            
+          </div>
+        </div> <!-- div row -->
       </section>
-      <section>
-        <article></article>
+      <!-- INICI PACKS -->
+      <section class="container">
+        <h2>Packs predefinits</h2>
+        <div class="row py-3">
+          <div class="col-md-6">
+            <article class="card">
+              <img class="card-img-top" src="http://lorempixel.com/600/250/nature" alt="Card image cap">
+              <div class="card-body">
+                <a href="#" class="card-link"><i class="fa fa-heart"></i></a>
+                <a href="#" class="card-link float-right">Veure</a>
+                <a href="#" class="card-link float-right">Afegir</a>
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">Pack predefinit 1</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="card">
+              <img class="card-img-top" src="http://lorempixel.com/600/250/nature" alt="Card image cap">
+              <div class="card-body">
+                <a href="#" class="card-link"><i class="fa fa-heart"></i></a>
+                <a href="#" class="card-link float-right">Veure</a>
+                <a href="#" class="card-link float-right">Afegir</a>
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">Pack predefinit 2</h4>
+                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
+              </div>
+            </article>
+          </div>
+        </div> <!-- div row -->
       </section>
-      <section>
-        <article></article>
-        <aside></aside> <!-- aside amb banners aka publi ha de desaparèixer a dispositius mòbils -->
+      <!-- INICI DESTACATS -->
+      <section class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-lg-12 col-md-6">
+                <article>
+                  <div class="mb-4 hover-animate">
+                    <div class="border-0 h-100 shadow card">
+                      <a href="/blog/newest-photo-apps">
+                        <img src="/content/img/photo/photo-1522771739844-6a9f6d5f14af.jpg" alt="..." class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
+                        <h5 class="my-2">
+                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
+                        </h5>
+                        <p class="text-gray-500 text-sm my-3">
+                          <i class="far fa-clock mr-2"></i>
+                          January 16, 2016
+                        </p>
+                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                        </p>
+                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
+                          <i class="fa fa-long-arrow-alt-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article>
+                  <div class="mb-4 hover-animate">
+                    <div class="border-0 h-100 shadow card">
+                      <a href="/blog/newest-photo-apps">
+                        <img src="/content/img/photo/photo-1522771739844-6a9f6d5f14af.jpg" alt="..." class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
+                        <h5 class="my-2">
+                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
+                        </h5>
+                        <p class="text-gray-500 text-sm my-3">
+                          <i class="far fa-clock mr-2"></i>
+                          January 16, 2016
+                        </p>
+                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                        </p>
+                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
+                          <i class="fa fa-long-arrow-alt-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article>
+                  <div class="mb-4 hover-animate">
+                    <div class="border-0 h-100 shadow card">
+                      <a href="/blog/newest-photo-apps">
+                        <img src="http://lorempixel.com/255/180/nature" alt="..." class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
+                        <h5 class="my-2">
+                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
+                        </h5>
+                        <p class="text-gray-500 text-sm my-3">
+                          <i class="far fa-clock mr-2"></i>
+                          January 16, 2016
+                        </p>
+                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                        </p>
+                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
+                          <i class="fa fa-long-arrow-alt-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article>
+                  <div class="mb-4 hover-animate">
+                    <div class="border-0 h-100 shadow card">
+                      <a href="/blog/newest-photo-apps">
+                        <img src="http://lorempixel.com/255/180/nature" alt="..." class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
+                        <h5 class="my-2">
+                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
+                        </h5>
+                        <p class="text-gray-500 text-sm my-3">
+                          <i class="far fa-clock mr-2"></i>
+                          January 16, 2016
+                        </p>
+                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                        </p>
+                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
+                          <i class="fa fa-long-arrow-alt-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 d-sm-none d-lg-block">
+            <aside>
+              <img src="https://via.placeholder.com/300x750?text=BANNER" alt="publicitat" class="img-fluid">
+            </aside> <!-- aside amb banners aka publi ha de desaparèixer a dispositius mòbils -->
+          </div>
+          <div class="col-sm-12 d-sm-block d-lg-none">
+            <aside class="d-flex justify-content-center">
+              <img src="https://via.placeholder.com/600x150?text=BANNER" alt="publicitat" class="img-fluid">
+            </aside> <!-- aside amb banners aka publi ha de desaparèixer a dispositius mòbils -->
+          </div>
+        </div>
       </section>
-      <section>
+      <!-- INICI DESTINACIÓ -->
+      <section class="container">
 
       </section>
-      <section>
-
+      <!-- INICI NEWSLETTER -->
+      <section class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Newsletter</h2>
+              </div>
+              <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem placeat odio quasi, natus deleniti enim?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+              <div class="input-group-append">
+                <button class="btn btn-dark" type="button">Subscriure's</button>
+              </div>
+            </div>   
+          </div>
+        </div>
       </section>
     </main>
     <footer class="container-fluid bg-light">
