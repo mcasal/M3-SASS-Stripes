@@ -22,11 +22,15 @@ nav li a {
     border: none;
 }
 
+section {
+    padding: 120px 0;
+}
+
 .hero {
     background-image: url(../img/470_05284.jpg);
     background-size: cover;
-    padding-top: 72px;
-    min-height: 650px;
+    padding-top: 250px;
+    min-height: 600px;
 
 }
 
@@ -35,6 +39,42 @@ nav li a {
     margin: 0 auto 60px auto;
     text-align: center;
 }
+
+.destinacio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 15px;
+}
+    .destinacio-container img {
+        transition: all 0.8s;
+    }
+    .destinacio-container a:hover img {
+        transform: scale(1.2);
+    }
+
+.destinacio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+    .destinacio-details h4 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 1px;
+    }
+
+    .destinacio-details p {
+        font-size: 1rem;
+    }
+
+    .destinacio-details h4, .destinacio-details p {
+        color: seashell;
+        text-shadow: 2px 2px 8px #000;
+    }
 
 
 /***** MEDIA QUERIES *****/
