@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
 }
 
 .navbar {
@@ -10,35 +11,83 @@ body {
 }
 
 nav li a {
-    color: #253237;
+    color: #3d3d3d;
+    transition-duration: 0.4s;
 }
     nav li a:hover {
-        background-color: #9DB4C0;
-        opacity: 0.8;
-        border-radius: 20px;
+        background-color: #eee;
+        border-radius: 25px;
     }
 
 .navbar-toggler {
     border: none;
 }
 
+.radius-0 {
+    border-radius: 0;
+}
+
 section {
-    padding: 120px 0;
+    padding: 10vh 0;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.00625rem;
 }
 
 .hero {
-    background-image: url(../img/470_05284.jpg);
+    background: url(../img/pexels-bri-schneiter-346529.jpg) no-repeat center center fixed;
     background-size: cover;
-    padding-top: 250px;
-    min-height: 600px;
+    padding-top: 20vh;
+    padding-left: 5vw;
+    min-height: 100vh;
 
 }
+    .hero h2, .hero h3 {
+        text-shadow: 0 5px 15px rgba(45, 45, 45, 0.5);
+        line-height: 1.5;
+    }
 
-.content-center {
-    max-width: 800px;
-    margin: 0 auto 60px auto;
-    text-align: center;
+.packs a {
+    color: #aaa;
+    transition-duration: 0.4s;
 }
+    .packs a:hover {
+        color: #3d3d3d;
+    }
+    .packs a:hover:nth-child(1) {
+        color: firebrick;
+    }
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.hover-gradient {
+    position: relative;
+    display: inline-block;
+}
+    .hover-gradient::before {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 99;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(45, 45, 45, 0.4));
+        transition: opacity 0.5s ease-out;
+    }
+    .hover-gradient:hover::before {
+        opacity: 1;
+        transition: opacity 0.5s ease-out;
+    }
 
 .destinacio-container {
     position: relative;
@@ -72,10 +121,79 @@ section {
     }
 
     .destinacio-details h4, .destinacio-details p {
-        color: seashell;
+        color: #fff;
         text-shadow: 2px 2px 8px #000;
     }
 
+.carousel-arrow-prev {
+    margin-right: 125px;
+    color: #3d3d3d;
+}
+
+.carousel-arrow-next {
+    margin-left: 125px;
+    color: #3d3d3d;
+}
+
+.carousel-indicators {
+    margin-bottom: -10px;
+}
+    .carousel-indicators li {
+        background-color: #3d3d3d;
+    }
+    
+.footer-bg {
+    background-color: #eee;
+}
+
+.footer-style {
+    padding-top: 60px;
+    font-size: 0.9rem;
+}
+    .footer-style h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.0625rem;
+    }
+    .footer-style a {
+        font-size: 1rem;
+        color: #666;
+        transition-duration: 0.4s;
+    }
+    .footer-style a:hover {
+        color: #3d3d3d;
+    }
+
+.footer-list {
+    list-style: none;
+    padding-left: 0px;
+    line-height: 2;
+}
+    .footer-list a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition-duration: 0.4s;
+    }
+    .footer-list a:hover {
+        background-color: #3d3d3d;
+        color: #eee;
+        padding: 0 5px;
+    }
+
+.footer-logos {
+    display: flex;
+    justify-content: end;
+    background-color: #eee;
+    padding-bottom: 5px;
+}
+
+.copy {
+    font-size: 0.8rem;
+    padding-top: 15px;
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
 
 /***** MEDIA QUERIES *****/
 /* Extra small devices (portrait phones, less than 576px)

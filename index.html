@@ -24,10 +24,46 @@
         <div class="container-fluid">
           <div class="d-flex align-items-center">
             <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
-            <form action="#" class="form-inline">
-              <input type="search" name="buscador" id="buscador" class="form-control">
-              <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+            <form action="#" class="form-inline d-none d-md-block d-lg-none">
+              <input type="search" name="buscador" id="buscador" class="form-control border-right-0 border radius-0">
+              <button type="submit" class="btn btn-outline-secondary border-left-0 border radius-0"><i class="fas fa-search"></i></button>
             </form>
+            <button class="btn btn-outline-dark d-none d-sm-block d-lg-none ml-md-3" type="button" data-toggle="modal" data-target="#login-modal">
+              <i class="far fa-user mr-2"></i>
+              Accedeix
+            </button>
+            <!-- MODAL POPUP LOGIN -->
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center w-100 font-weight-bold">Accedeix</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body mx-3">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Usuari" aria-label="Usuari">
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Contrasenya" aria-label="Contrasenya">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" target="_blank" class="text-dark pr-4">Necessites ajuda?</a>
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel·lar</button>
+                    <button type="button" class="btn btn-outline-primary">Entrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks">
             <i class="fas fa-bars"></i>
@@ -52,34 +88,36 @@
                 <a href="#" class="nav-link">Destacats</a>
               </li>
               <li class="nav-item mx-2">
-                <a href="#" class="nav-link">Qui som?</a>
-              </li>
-              <li class="nav-item mx-2">
                 <a href="#" class="nav-link">Contacte</a>
               </li>
-              <li class="nav-item mx-2">
+              <li class="nav-item mx-2 d-block d-sm-none d-lg-block">
                 <button class="nav-link btn" type="button" data-toggle="modal" data-target="#login-modal">
                   <i class="far fa-user mr-2"></i>
                   Accedeix
                 </button>
+              </li>
+              <li class="nav-item mx-2 d-none d-lg-block">
+                <form action="#" class="form-inline">
+                  <input type="search" name="buscador" id="buscador" class="form-control border-right-0 border radius-0">
+                  <button type="submit" class="btn btn-outline-secondary border-left-0 border radius-0"><i class="fas fa-search"></i></button>
+                </form>
               </li>
             </ul>
           </div> <!-- navbar collpase -->
         </div> <!-- container-fluid -->
       </nav>
     </header>
-    <main class="container-fluid">
+    <main>
       <!-- INICI HERO -->
-      <section class="hero">
-        <div class="container">
-          <h2 class="display-2 text-white">Text display</h2>
-          <h3 class="display-4 text-light">Subtext display</h3>
-        </div> <!-- div container -->
+      <section class="container-fluid hero">
+        <h2 class="display-2 text-white font-weight-bold">Text display</h2>
+        <h3 class="display-4 text-white font-weight-light">Subtext display</h3>
+        <button type="button" class="btn btn-outline-light mt-5 text-uppercase">coneixer</button>
       </section>
       <!-- INICI SEARCHBAR -->
       <section class="container">
         <div class="row">
-          <div class="content-center py-5">
+          <div class="col-md-12 d-flex align-items-center w-100">
             <form class="form-inline">
               <label class="sr-only" for="inlineFormInputName2">Name</label>
               <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
@@ -87,19 +125,13 @@
               <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
               <div class="input-group mb-2 mr-sm-2">
                 <div class="input-group-prepend">
-                  <div class="input-group-text">@</div>
+                  <div class="input-group-text">
+                    <i class="fas fa-crosshairs"></i>
+                  </div>
                 </div>
                 <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
               </div>
-            
-              <div class="form-check mb-2 mr-sm-2">
-                <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-                <label class="form-check-label" for="inlineFormCheck">
-                  Remember me
-                </label>
-              </div>
-        
-              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+              <button type="submit" class="btn btn-dark mb-2">Veure</button>
             </form>            
           </div>
         </div> <!-- div row -->
@@ -107,32 +139,32 @@
       <!-- INICI PACKS -->
       <section class="container">
         <h2>Packs predefinits</h2>
-        <div class="row py-3">
+        <div class="row">
           <div class="col-md-6">
-            <article class="card">
-              <img class="card-img-top" src="http://lorempixel.com/600/250/nature" alt="Card image cap">
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="fa fa-heart"></i></a>
+            <article class="card mb-sm-5 border-0 shadow mb-5 rounded">
+              <img class="card-img-top img-fluid" src="img/pexels-tobias-bjørkli-2230444.jpg" alt="Card image cap">
+              <div class="card-body packs">
+                <a href="#" class="card-link"><i class="fas fa-heart"></i></a>
                 <a href="#" class="card-link float-right">Veure</a>
                 <a href="#" class="card-link float-right">Afegir</a>
               </div>
               <div class="card-body">
                   <h4 class="card-title">Pack predefinit 1</h4>
-                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
+                  <p class="card-text text-secondary pb-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
               </div>
             </article>
           </div>
           <div class="col-md-6">
-            <article class="card">
-              <img class="card-img-top" src="http://lorempixel.com/600/250/nature" alt="Card image cap">
-              <div class="card-body">
-                <a href="#" class="card-link"><i class="fa fa-heart"></i></a>
+            <article class="card border-0 shadow mb-5 rounded">
+              <img class="card-img-top" src="img/pexels-tirachard-kumtanom-450062.jpg" alt="Card image cap">
+              <div class="card-body packs">
+                <a href="#" class="card-link"><i class="fas fa-heart"></i></a>
                 <a href="#" class="card-link float-right">Veure</a>
                 <a href="#" class="card-link float-right">Afegir</a>
               </div>
               <div class="card-body">
                   <h4 class="card-title">Pack predefinit 2</h4>
-                  <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
+                  <p class="card-text text-secondary pb-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis a at culpa incidunt quo, illum tenetur mollitia fugit dicta rem perspiciatis eligendi tempore vero dignissimos.</p>
               </div>
             </article>
           </div>
@@ -140,121 +172,191 @@
       </section>
       <!-- INICI DESTACATS -->
       <section class="container">
+        <h2>Activitats destacades</h2>
         <div class="row">
           <div class="col-lg-9">
             <div class="row">
-              <div class="col-lg-12 col-md-6">
-                <article>
-                  <div class="mb-4 hover-animate">
-                    <div class="border-0 h-100 shadow card">
-                      <a href="/blog/newest-photo-apps">
-                        <img src="/content/img/photo/photo-1522771739844-6a9f6d5f14af.jpg" alt="..." class="card-img-top">
-                      </a>
-                      <div class="card-body">
-                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
-                        <h5 class="my-2">
-                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
-                        </h5>
-                        <p class="text-gray-500 text-sm my-3">
-                          <i class="far fa-clock mr-2"></i>
-                          January 16, 2016
-                        </p>
-                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
-                        </p>
-                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
-                          <i class="fa fa-long-arrow-alt-right"></i>
-                        </a>
-                      </div>
-                    </div>
+              <!-- ARTICLE 1 -->
+              <div class="col-md-12 d-none d-md-block">
+                <article class="card-horizontal mb-4 shadow border-0 rounded">
+                  <a href="#" class="hover-gradient">
+                    <img class="img-fluid rounded-left" src="img/pexels-breakingpic-3044.jpg" alt="Tast de vins">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Gastronomia</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 1</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>16-01-2019
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pt-5 pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </article>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <article>
-                  <div class="mb-4 hover-animate">
-                    <div class="border-0 h-100 shadow card">
-                      <a href="/blog/newest-photo-apps">
-                        <img src="/content/img/photo/photo-1522771739844-6a9f6d5f14af.jpg" alt="..." class="card-img-top">
-                      </a>
-                      <div class="card-body">
-                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
-                        <h5 class="my-2">
-                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
-                        </h5>
-                        <p class="text-gray-500 text-sm my-3">
-                          <i class="far fa-clock mr-2"></i>
-                          January 16, 2016
-                        </p>
-                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
-                        </p>
-                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
-                          <i class="fa fa-long-arrow-alt-right"></i>
-                        </a>
-                      </div>
-                    </div>
+              <div class="col-12 d-md-none">
+                <article class="border-0 shadow card mb-4">  
+                  <a href="#" class="hover-gradient">
+                    <img src="img/pexels-breakingpic-3044.jpg" alt="Tast de vins" class="img-fluid card-img-top">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Gastronomia</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 1</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>16-01-2019
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </article>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <article>
-                  <div class="mb-4 hover-animate">
-                    <div class="border-0 h-100 shadow card">
-                      <a href="/blog/newest-photo-apps">
-                        <img src="http://lorempixel.com/255/180/nature" alt="..." class="card-img-top">
-                      </a>
-                      <div class="card-body">
-                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
-                        <h5 class="my-2">
-                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
-                        </h5>
-                        <p class="text-gray-500 text-sm my-3">
-                          <i class="far fa-clock mr-2"></i>
-                          January 16, 2016
-                        </p>
-                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
-                        </p>
-                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
-                          <i class="fa fa-long-arrow-alt-right"></i>
-                        </a>
-                      </div>
-                    </div>
+              <!-- ARTICLE 2 -->
+              <div class="col-12 col-lg-4 d-md-none d-lg-block">
+                <article class="border-0 mb-4 shadow card">
+                  <a href="#" class="hover-gradient">
+                    <img src="img/pexels-helena-lopes-696219.jpg" alt="Tast de vins" class="img-fluid card-img-top">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Cultura</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 2</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>06-10-2019
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </article>
               </div>
-              <div class="col-lg-4 col-md-6">
-                <article>
-                  <div class="mb-4 hover-animate">
-                    <div class="border-0 h-100 shadow card">
-                      <a href="/blog/newest-photo-apps">
-                        <img src="http://lorempixel.com/255/180/nature" alt="..." class="card-img-top">
-                      </a>
-                      <div class="card-body">
-                        <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Living</a>
-                        <h5 class="my-2">
-                          <a class="text-dark" href="/blog/newest-photo-apps">Newest photo apps</a>
-                        </h5>
-                        <p class="text-gray-500 text-sm my-3">
-                          <i class="far fa-clock mr-2"></i>
-                          January 16, 2016
-                        </p>
-                        <p class="my-2 text-muted text-sm">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
-                        </p>
-                        <a class="pl-0 btn btn-link" href="/blog/newest-photo-apps">Continue reading 
-                          <i class="fa fa-long-arrow-alt-right"></i>
-                        </a>
-                      </div>
-                    </div>
+              <div class="col-md-12 d-none d-md-block d-lg-none">
+                <article class="card-horizontal mb-4 shadow border-0 rounded">
+                  <a href="#" class="hover-gradient">
+                    <img class="img-fluid rounded-left" src="img/pexels-helena-lopes-696219.jpg" alt="Tast de vins">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Cultura</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 2</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>06-10-2019
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pt-5 pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- ARTICLE 3 -->
+              <div class="col-12 col-lg-4 d-md-none d-lg-block">
+                <article class="border-0 mb-4 shadow card">
+                  <a href="#" class="hover-gradient">
+                    <img src="img/pexels-karolina-grabowska-4210861.jpg" alt="Cuina de proximitat" class="img-fluid card-img-top">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Gastronomia</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 3</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>24-05-2020
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-12 d-none d-md-block d-lg-none">
+                <article class="card-horizontal mb-4 shadow border-0 rounded">
+                  <a href="#" class="hover-gradient">
+                    <img class="img-fluid rounded-left" src="img/pexels-karolina-grabowska-4210861.jpg" alt="Cuina de proximitat">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Cultura</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 3</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>24-05-2020
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pt-5 pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <!-- ARTICLE 4 -->
+              <div class="col-12 col-lg-4 d-md-none d-lg-block">
+                <article class="border-0 mb-4 shadow card">
+                  <a href="#" class="hover-gradient">
+                    <img src="img/pexels-nubia-navarro-(nubikini)-386000.jpg" alt="Allotjaments pallaresos" class="img-fluid card-img-top">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Allotjament</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 4</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>03-04-2020
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-12 d-none d-md-block d-lg-none">
+                <article class="card-horizontal mb-4 shadow border-0 rounded">
+                  <a href="#" class="hover-gradient">
+                    <img class="img-fluid rounded-left" src="img/pexels-nubia-navarro-(nubikini)-386000.jpg" alt="Allotjaments pallaresos">
+                  </a>
+                  <div class="card-body">
+                    <a href="#" class="text-uppercase text-muted text-sm letter-spacing-2">Allotjament</a>
+                    <h5 class="my-2">
+                      <a class="text-dark" href="#">Titol article 4</a>
+                    </h5>
+                    <p class="text-secondary text-sm my-3">
+                      <i class="far fa-clock mr-2"></i>03-04-2020
+                    </p>
+                    <p class="my-2 text-muted text-sm">Ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibu...
+                    </p>
+                    <a class="pt-5 pl-0 btn btn-link" href="#">Continuar llegint 
+                      <i class="ml-1 fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </article>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 d-sm-none d-lg-block">
+          <!-- BANNERS -->
+          <div class="col-lg-3 d-none d-lg-block">
             <aside>
               <img src="https://via.placeholder.com/300x750?text=BANNER" alt="publicitat" class="img-fluid">
             </aside> <!-- aside amb banners aka publi ha de desaparèixer a dispositius mòbils -->
           </div>
-          <div class="col-sm-12 d-sm-block d-lg-none">
+          <div class="col-12 d-block d-lg-none">
             <aside class="d-flex justify-content-center">
               <img src="https://via.placeholder.com/600x150?text=BANNER" alt="publicitat" class="img-fluid">
             </aside> <!-- aside amb banners aka publi ha de desaparèixer a dispositius mòbils -->
@@ -263,94 +365,308 @@
       </section>
       <!-- INICI DESTINACIONS -->
       <section class="container">
-        <!-- SLIDER -->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>Tremp</h4>
-                <p>Pallars Jussà</p>
+        <!-- SLIDERS -->
+        <h2 class="text-center">Destinacions</h2>
+        <!-- SLIDER LG -->
+        <div id="carouselLG" class="carousel slide d-none d-lg-block" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- SLIDER 1 amb 3 cards -->
+            <div class="carousel-item active">
+              <!-- CARD 1 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Tremp</h4>
+                    <p>Pallars Jussà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-anthony-132428.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-anthony-132428.jpg" alt="Imatge paisatge">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>Sort</h4>
-                <p>Pallars Sobirà</p>
+              <!-- CARD 2 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Sort</h4>
+                    <p>Pallars Sobirà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-flo-maderebner-238622.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-flo-maderebner-238622.jpg" alt="Imatge paisatge">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>Pont de Suert</h4>
-                <p>Alta Ribagorça</p>
+              <!-- CARD 3 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Pont de Suert</h4>
+                    <p>Alta Ribagorça</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-james-wheeler-1486974.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-james-wheeler-1486974.jpg" alt="Imatge paisatge">
-              </a>
             </div>
+            <!-- SLIDER 2 amb 3 cards -->
+            <div class="carousel-item">
+              <!-- CARD 4 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>La Seu d'Urgell</h4>
+                    <p>Alt Urgell</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-jarod-lovekamp-3791466.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+              <!-- CARD 5 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Puigcerdà</h4>
+                    <p>Cerdanya</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-krivec-ales-552785.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+              <!-- CARD 6 -->
+              <div class="col-md-4 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Viella</h4>
+                    <p>Vall d'Aran</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-nick-bondarev-4344434.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- CONTROLS SLIDER -->
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>La Seu d'Urgell</h4>
-                <p>Alt Urgell</p>
+        <!-- SLIDER MD -->
+        <div id="carouselMD" class="carousel slide d-none d-md-block d-lg-none" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- SLIDER 1 amb 2 cards -->
+            <div class="carousel-item active">
+              <!-- CARD 1 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Tremp</h4>
+                    <p>Pallars Jussà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-anthony-132428.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-jarod-lovekamp-3791466.jpg" alt="Imatge paisatge">
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>Puigcerdà</h4>
-                <p>Cerdenya</p>
+              <!-- CARD 2 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Sort</h4>
+                    <p>Pallars Sobirà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-flo-maderebner-238622.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-krivec-ales-552785.jpg" alt="Imatge paisatge">
-              </a>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="destinacio-container">
-              <div class="destinacio-details">
-                <h4>Viella</h4>
-                <p>Vall d'Aran</p>
+            <!-- SLIDER 2 amb 2 cards -->
+            <div class="carousel-item">
+              <!-- CARD 3 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Pont de Suert</h4>
+                    <p>Alta Ribagorça</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-james-wheeler-1486974.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
               </div>
-              <a href="#">
-                <img class="img-fluid" src="img/pexels-nick-bondarev-4344434.jpg" alt="Imatge paisatge">
-              </a>
+              <!-- CARD 4 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>La Seu d'Urgell</h4>
+                    <p>Alt Urgell</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-jarod-lovekamp-3791466.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
             </div>
+            <!-- SLIDER 3 amb 2 cards -->
+            <div class="carousel-item">
+              <!-- CARD 5 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Puigcerdà</h4>
+                    <p>Cerdanya</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-krivec-ales-552785.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+              <!-- CARD 6 -->
+              <div class="col-md-6 float-left">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Viella</h4>
+                    <p>Vall d'Aran</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-nick-bondarev-4344434.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- CONTROLS SLIDER -->
+            <a class="carousel-control-prev" href="#carouselMD" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselMD" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
-      
+        <!-- SLIDER SM -->
+        <div id="carouselSM" class="carousel slide d-sm-block d-md-none" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- 1 CARD = 1 SLIDER -->
+            <div class="carousel-item active">
+              <!-- CARD 1 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Tremp</h4>
+                    <p>Pallars Jussà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-anthony-132428.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- CARD 2 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Sort</h4>
+                    <p>Pallars Sobirà</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-flo-maderebner-238622.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- CARD 3 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Pont de Suert</h4>
+                    <p>Alta Ribagorça</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-james-wheeler-1486974.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- CARD 4 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>La Seu d'Urgell</h4>
+                    <p>Alt Urgell</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-jarod-lovekamp-3791466.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- CARD 5 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Puigcerdà</h4>
+                    <p>Cerdanya</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-krivec-ales-552785.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- CARD 6 -->
+              <div class="col-sm-12">
+                <div class="destinacio-container">
+                  <div class="destinacio-details">
+                    <h4>Viella</h4>
+                    <p>Vall d'Aran</p>
+                  </div>
+                  <a href="#">
+                    <img class="img-fluid" src="img/pexels-nick-bondarev-4344434.jpg" alt="Imatge paisatge">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- CONTROLS SLIDER -->
+            <a class="carousel-control-prev" href="#carouselSM" role="button" data-slide="prev">
+              <span class="carousel-arrow-prev">
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              </span>
+            </a>
+            <a class="carousel-control-next" href="#carouselSM" role="button" data-slide="next">
+              <span class="carousel-arrow-next">
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- FI SLIDERS -->
       </section>
       <!-- INICI NEWSLETTER -->
       <section class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <h2>Newsletter</h2>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem placeat odio quasi, natus deleniti enim?</p>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 d-flex align-items-center">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
               <div class="input-group-append">
@@ -361,58 +677,64 @@
         </div>
       </section>
     </main>
-    <footer class="container-fluid bg-light">
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Footer 1</h4>
-            <ul>
-              <li>Contingut 1</li>
-              <li>Contingut 2</li>
-              <li>Contingut 3</li>
-              <li>Contingut 4</li>
-              <li>Contingut 5</li>
-              <li>Contingut 6</li>
-              <li>Contingut 7</li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <h4>Footer 2</h4>
-            <ul>
-              <li>Contingut 1</li>
-              <li>Contingut 2</li>
-              <li>Contingut 3</li>
-              <li>Contingut 4</li>
-              <li>Contingut 5</li>
-              <li>Contingut 6</li>
-              <li>Contingut 7</li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <h4>Footer 3</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error, provident eaque nihil ut voluptas quo, rem assumenda magni cupiditate sed iste labore maxime ab nisi adipisci animi recusandae. Nam tempore corrupti nihil fugiat rem?</p>
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="http://www.twitter.com">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-               <li class="list-inline-item">
-                <a href="http://www.instagram.com">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-               <a href="http://www.facebook.com">
-                <i class="fab fa-facebook-square"></i>
-               </a>
-              </li>
-            </ul>
+    <footer class="container-fluid footer-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 footer-style">
+            <h4>Footer 1</h4>
+              <ul class="footer-list">
+                <li><a href="#">Contingut 1</a></li>
+                <li><a href="#">Contingut 2</a></li>
+                <li><a href="#">Contingut 3</a></li>
+                <li><a href="#">Contingut 4</a></li>
+                <li><a href="#">Contingut 5</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-4 col-sm-6 footer-style">
+            <h4>Footer 2</h4>
+              <ul class="footer-list">
+                <li><a href="#">Contingut 1</a></li>
+                <li><a href="#">Contingut 2</a></li>
+                <li><a href="#">Contingut 3</a></li>
+                <li><a href="#">Contingut 4</a></li>
+                <li><a href="#">Contingut 5</a></li>
+                <li><a href="#">Contingut 6</a></li>
+                <li><a href="#">Contingut 7</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-4 col-12 footer-style">
+            <h4>Footer 3</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error, provident eaque nihil ut voluptas quo, rem assumenda magni cupiditate sed iste labore maxime ab nisi adipisci animi recusandae. Nam tempore corrupti nihil fugiat rem?</p>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="http://www.twitter.com">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                 <li class="list-inline-item">
+                  <a href="http://www.instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                 <a href="http://www.facebook.com">
+                  <i class="fab fa-facebook-square"></i>
+                 </a>
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
       <div class="row">
-        <div class="justify-content-end">
-          <img src="https://via.placeholder.com/125x35?text=LOGO" alt="logo empresa">
-          <img src="https://via.placeholder.com/125x35?text=LOGO" alt="logo empresa">
+        <div class="col-md-12 footer-logos">
+          <img src="https://via.placeholder.com/125x35?text=LOGO" alt="logo empresa" class="img-fluid">
+          <img src="https://via.placeholder.com/125x35?text=LOGO" alt="logo empresa" class="img-fluid px-1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 copy">
+          <p class="text-center">&copy; Copyright 2020 - Turisme Alt Pirineu i Aran.  Tots els drets reservats.</p>
+        </div>
       </div>
     </footer>
     <!-- FINAL CONTINGUT -->
