@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
-    <!-- Estilos propios -->
+    <!-- Estils propis -->
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Turisme APA</title>
@@ -25,7 +25,7 @@
           <div class="d-flex align-items-center">
             <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
             <form action="#" class="form-inline d-none d-md-block d-lg-none">
-              <input type="search" name="buscador" id="buscador" class="form-control border-right-0 border radius-0">
+              <input type="search" name="buscador" id="buscador" class="form-control border-right-0 border radius-0" placeholder="Buscar...">
               <button type="submit" class="btn btn-outline-secondary border-left-0 border radius-0"><i class="fas fa-search"></i></button>
             </form>
             <button class="btn btn-outline-dark d-none d-sm-block d-lg-none ml-md-3" type="button" data-toggle="modal" data-target="#login-modal">
@@ -116,25 +116,34 @@
       </section>
       <!-- INICI SEARCHBAR -->
       <section class="container">
-        <div class="row">
-          <div class="col-md-12 d-flex align-items-center w-100">
-            <form class="form-inline">
-              <label class="sr-only" for="inlineFormInputName2">Name</label>
-              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
-            
-              <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-              <div class="input-group mb-2 mr-sm-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fas fa-crosshairs"></i>
-                  </div>
-                </div>
-                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+        <form action="#" class="searchBar">
+          <div class="form-group row no-gutters">
+              <div class="col-sm-12 mb-2 col-lg-3">
+                  <label for="buscar" class="sr-only">Buscar</label>
+                  <input type="text" class="form-control" id="buscar" placeholder="Què busques?">
               </div>
-              <button type="submit" class="btn btn-dark mb-2">Veure</button>
-            </form>            
+              <div class="col-sm-12 mb-2 col-lg-3">
+                  <label for="localitzacio" class="sr-only">Localització</label>
+                  <div class="input-group">
+                      <input type="text" class="form-control" id="localitzacio" placeholder="Localització">
+                      <div class="input-group-prepend">
+                          <div class="input-group-text">
+                              <i class="fas fa-crosshairs"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 mb-2 col-lg-2">
+                  <label for="data" class="sr-only">Date</label>
+                  <input class="form-control" type="date" value="" id="data">
+              </div>
+              <div class="col-sm-6 mb-2 col-lg-1">
+                  <label for="personetes" class="sr-only">Persones</label>
+                  <input type="number" value="1" min="1" class="form-control" placeholder=".col-1" id="personetes">
+              </div>
+              <button type="submit" class="btn btn-dark">Disponibilitat</button>
           </div>
-        </div> <!-- div row -->
+      </form>
       </section>
       <!-- INICI PACKS -->
       <section class="container">
@@ -738,6 +747,7 @@
       </div>
     </footer>
     <!-- FINAL CONTINGUT -->
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
