@@ -22,12 +22,10 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
-        <div class="form-group border rounded-pill px-1 d-none d-md-block d-lg-none">
-          <input type="search" placeholder="Buscar..." class="form-control bg-none border-0">
-          <div class="input-group-append border-0">
-            <button type="button" class="btn btn-outline-secondary border-0">
-              <i class="fa fa-search"></i>
-            </button>
+        <div class="input-group border w-25 d-lg-none">
+          <input type="search" class="form-control border-0" placeholder="Buscar" aria-label="Buscar">
+          <div class="input-group-append">
+            <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
           </div>
         </div>
         <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#login-modal">
@@ -59,14 +57,13 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <a href="#" target="_blank" class="text-dark pr-4">No recordes l'usuari o contrasenya?</a>
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel·lar</button>
-                    <button type="button" class="btn btn-outline-primary">Entrar</button>
+                    <a href="#" target="_blank" class="text-muted pr-4">No recordes l'usuari o contrasenya?</a>
+                    <button type="button" class="btn btn-outline-secondary">Entrar</button>
                   </div>
                 </div>
               </div>
         </div>
-        <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#register-modal">
+        <button class="btn btn-outline-dark d-none d-md-block d-lg-none" type="button" data-toggle="modal" data-target="#register-modal">
               <i class="far fa-edit mr-2"></i>
               Registra't
         </button>
@@ -110,7 +107,7 @@
                     <button type="button" class="btn btn-dark mt-4">Crear</button>
                   </div>
                   <div class="modal-footer">
-                    <a href="#" target="_blank" class="text-dark pr-4">Necessites ajuda?</a>
+                    <a href="#" target="_blank" class="text-muted pr-4">Necessites ajuda?</a>
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel·lar</button>
                   </div>
                 </div>
@@ -120,7 +117,7 @@
           <i class="fas fa-bars"></i> <!-- icona nav burger -->
         </button>
         <div class="collapse navbar-collapse" id="navlinks">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto align-items-center">
               <li class="nav-item mx-2">
                 <a href="#" class="nav-link">Pack</a>
               </li>
@@ -148,7 +145,7 @@
                 </button>
               </li>
               <li class="nav-item mx-2 d-none d-lg-block">
-                <div class="input-group border rounded-pill px-1">
+                <div class="input-group border px-1">
                   <input type="search" placeholder="Buscar..." class="form-control bg-none border-0">
                   <div class="input-group-append border-0">
                     <button type="button" class="btn btn-link text-dark">
