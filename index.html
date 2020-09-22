@@ -21,23 +21,21 @@
     <!-- INICI CONTINGUT -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <div class="d-flex align-items-center">
-            <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
-            <div class="input-group border rounded-pill px-1 d-none d-md-block d-lg-none">
-              <input type="search" placeholder="Buscar..." class="form-control bg-none border-0">
-              <div class="input-group-append border-0">
-                <button type="button" class="btn btn-link text-dark">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
-            <button class="btn btn-outline-dark d-none d-sm-block d-lg-none ml-md-3" type="button" data-toggle="modal" data-target="#login-modal">
+        <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
+        <div class="form-group border rounded-pill px-1 d-none d-md-block d-lg-none">
+          <input type="search" placeholder="Buscar..." class="form-control bg-none border-0">
+          <div class="input-group-append border-0">
+            <button type="button" class="btn btn-outline-secondary border-0">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#login-modal">
               <i class="far fa-user mr-2"></i>
               Accedeix
-            </button>
-            <!-- MODAL POPUP LOGIN -->
-            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        </button>
+        <!-- MODAL POPUP LOGIN -->
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -61,19 +59,19 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <a href="#" target="_blank" class="text-dark pr-4">Necessites ajuda?</a>
+                    <a href="#" target="_blank" class="text-dark pr-4">No recordes l'usuari o contrasenya?</a>
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel·lar</button>
                     <button type="button" class="btn btn-outline-primary">Entrar</button>
                   </div>
                 </div>
               </div>
-            </div>
-            <button class="btn btn-outline-dark d-none d-sm-block d-lg-none ml-md-3" type="button" data-toggle="modal" data-target="#register-modal">
+        </div>
+        <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#register-modal">
               <i class="far fa-edit mr-2"></i>
               Registra't
-            </button>
-            <!-- MODAL POPUP REGISTER -->
-            <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        </button>
+        <!-- MODAL POPUP REGISTER -->
+        <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -117,12 +115,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks">
-            <i class="fas fa-bars"></i> <!-- icona nav burger -->
-          </button>
-          <div class="collapse navbar-collapse" id="navlinks">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks">
+          <i class="fas fa-bars"></i> <!-- icona nav burger -->
+        </button>
+        <div class="collapse navbar-collapse" id="navlinks">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item mx-2">
                 <a href="#" class="nav-link">Pack</a>
@@ -163,12 +160,11 @@
               <li class="nav-item mx-2 d-block d-sm-none d-lg-block">
                 <button class="nav-link btn" type="button" data-toggle="modal" data-target="#login-modal">
                   <i class="far fa-user mr-2"></i>
-                  Accedeix
+                  <span class="">Accedeix</span>
                 </button>
               </li>
             </ul>
-          </div> <!-- navbar collpase -->
-        </div> <!-- container-fluid -->
+        </div> <!-- navbar collpase --> 
       </nav>
     </header>
     <main>
@@ -179,35 +175,40 @@
         <button type="button" class="btn btn-outline-light mt-5 text-uppercase">coneixer</button>
       </section>
       <!-- INICI SEARCHBAR -->
-      <section class="container">
-        <form action="#" class="searchBar">
-          <div class="form-group row no-gutters">
+      <section class="container-fluid bg-light">
+        <h2 class="text-center">Descobreix experències</h2>
+        <form action="#" class="search-bar">
+          <div class="form-group">
+            <div class="row">
               <div class="col-sm-12 my-2 col-lg-3">
-                  <label for="buscar" class="sr-only">Buscar</label>
-                  <input type="text" class="form-control" id="buscar" placeholder="Què busques?">
+                <label for="buscar" class="sr-only">Buscar</label>
+                <input type="text" class="form-control" id="buscar" placeholder="Què busques?">
               </div>
               <div class="col-sm-12 my-2 col-lg-3">
-                  <label for="localitzacio" class="sr-only">Localització</label>
-                  <div class="input-group">
-                      <input type="text" class="form-control" id="localitzacio" placeholder="Localització">
-                      <div class="input-group-prepend">
-                          <div class="input-group-text">
-                              <i class="fas fa-crosshairs"></i>
-                          </div>
-                      </div>
+                <label for="localitzacio" class="sr-only">Localització</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="localitzacio" placeholder="Localització">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="fas fa-crosshairs"></i>
+                    </div>
                   </div>
+                </div>
               </div>
               <div class="col-sm-6 my-2 col-lg-2">
-                  <label for="data" class="sr-only">Date</label>
-                  <input class="form-control" type="date" value="" id="data">
+                <label for="data" class="sr-only">Data</label>
+                <input class="form-control" type="date" value="" id="data">
               </div>
               <div class="col-sm-6 my-2 col-lg-1">
-                  <label for="personetes" class="sr-only">Persones</label>
-                  <input type="number" value="1" min="1" class="form-control" placeholder=".col-1" id="personetes">
+                <label for="personetes" class="sr-only">Persones</label>
+                <input type="number" value="1" min="1" class="form-control" placeholder=".col-1" id="personetes">
               </div>
-              <button type="submit" class="btn btn-dark">Disponibilitat</button>
+              <div class="col-sm-12 my-2 col-lg-3">
+                <button type="submit" class="btn btn-dark">Disponibilitat</button>
+              </div>
+            </div>
           </div>
-      </form>
+        </form>
       </section>
       <!-- INICI PACKS -->
       <section class="container">
@@ -624,12 +625,12 @@
           </div>
         </div>
         <!-- SLIDER SM -->
-        <div id="carouselSM" class="carousel slide d-sm-block d-md-none" data-ride="carousel">
+        <div id="carouselSM" class="carousel slide d-block d-md-none" data-ride="carousel">
           <div class="carousel-inner">
             <!-- 1 CARD = 1 SLIDER -->
             <div class="carousel-item active">
               <!-- CARD 1 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>Tremp</h4>
@@ -643,7 +644,7 @@
             </div>
             <div class="carousel-item">
               <!-- CARD 2 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>Sort</h4>
@@ -657,7 +658,7 @@
             </div>
             <div class="carousel-item">
               <!-- CARD 3 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>Pont de Suert</h4>
@@ -671,7 +672,7 @@
             </div>
             <div class="carousel-item">
               <!-- CARD 4 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>La Seu d'Urgell</h4>
@@ -685,7 +686,7 @@
             </div>
             <div class="carousel-item">
               <!-- CARD 5 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>Puigcerdà</h4>
@@ -699,7 +700,7 @@
             </div>
             <div class="carousel-item">
               <!-- CARD 6 -->
-              <div class="col-sm-12">
+              <div class="col-12">
                 <div class="destinacio-container">
                   <div class="destinacio-details">
                     <h4>Viella</h4>
@@ -714,7 +715,7 @@
             <!-- CONTROLS SLIDER -->
             <a class="carousel-control-prev" href="#carouselSM" role="button" data-slide="prev">
               <span class="carousel-arrow-prev">
-                <i class="fas fa-arrow-alt-circle-right"></i>
+                <i class="fas fa-arrow-alt-circle-left"></i>
               </span>
             </a>
             <a class="carousel-control-next" href="#carouselSM" role="button" data-slide="next">

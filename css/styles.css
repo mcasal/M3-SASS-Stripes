@@ -16,16 +16,19 @@ nav li a {
 }
     nav li a:hover {
         background-color: #eee;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 
 .navbar-toggler {
     border: none;
 }
 
-.radius-0 {
-    border-radius: 0;
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
 }
+  
 
 section {
     padding: 10vh 0;
@@ -44,7 +47,7 @@ h2 {
     background-size: cover;
     padding-top: 20vh;
     padding-left: 5vw;
-    min-height: 100vh;
+    min-height: 90vh;
 
 }
     .hero h2, .hero h3 {
@@ -56,7 +59,7 @@ h2 {
         padding-top: 2vh;
     }
 
-.searchBar {
+.search-bar {
     margin: auto;
     width: 75vw;
 }
@@ -134,16 +137,27 @@ h2 {
         color: #fff;
         text-shadow: 2px 2px 8px #000;
     }
-
-/* .carousel-arrow-prev {
-    margin-right: 125px;
-    color: #3d3d3d;
+#carouselSM {
+    text-align: center;
 }
+    #carouselSM img {
+        border-radius: 5px;
+    }
+    #carouselSM .destinacio-details {
+        text-align: left;
+        left: 15vh;
+    }
+    #carouselSM .carousel-arrow-prev {
+        margin-right: 1vh;
+        color: #3d3d3d;
+        font-size: 1.5rem;
+    }
 
-.carousel-arrow-next {
-    margin-left: 125px;
-    color: #3d3d3d;
-}*/
+    #carouselSM .carousel-arrow-next {
+        margin-left: 1vh;
+        color: #3d3d3d;
+        font-size: 1.5rem;
+    }
 
 .carousel-indicators {
     margin-bottom: -0.7vw;
