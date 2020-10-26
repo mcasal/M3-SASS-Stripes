@@ -4,6 +4,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
 }
+    body.modal-open {
+        overflow: auto;
+        padding-right: 0 !important;
+    } /* a l'obrir els modals versió desktop, afegeix un padding-right de 15px al body. Amb aquest css ja no surt */
 
 .navbar {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
@@ -27,10 +31,18 @@ nav li a {
     font-size: 0.95rem;
     color: #aaa;
     font-style: italic;
-}  
+}
+    .form-control.is-invalid::placeholder {
+        font-size: 0.85rem;
+        color: #ee8f98;
+    }
 
-.form-control:focus {
+.form-control:focus, .form-control.is-invalid:focus, .btn:focus {
     box-shadow: none;
+}
+
+.border-error {
+    border: 1px solid #dc3545;
 }
 
 section {
@@ -46,7 +58,7 @@ h2 {
 }
 
 .hero {
-    background: url(../img/pexels-bri-schneiter-346529.jpg) no-repeat center center fixed;
+    background: url(../img/pexels-bri-schneiter-346529.jpg) no-repeat center fixed;
     background-size: cover;
     padding-top: 20vh;
     padding-left: 5vw;

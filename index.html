@@ -11,7 +11,6 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-
     <!-- Estils propis -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -23,12 +22,14 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
-        <div class="input-group border w-25 d-lg-none">
-          <input type="search" class="form-control border-0" placeholder="Buscar" aria-label="Buscar">
-          <div class="input-group-append">
-            <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
+        <form action="#" method="post" class="searchFormValidate" id="searchFormXS" onsubmit="return searchValidator()" name="searchFormXS">
+          <div class="input-group border d-lg-none">
+            <input type="search" class="form-control border-0" id="searchFormInputXS" minlength="3" placeholder="Buscar..." aria-label="Buscar">
+            <div class="input-group-append">
+              <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
+            </div>
           </div>
-        </div>
+        </form>
         <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#login-modal">
               <i class="far fa-user mr-2"></i>
               Accedeix
@@ -44,22 +45,26 @@
                       </button>
                   </div>
                   <div class="modal-body mx-3">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <form method="POST" action="login.html" id="formLogin" onsubmit="return loginValidator()" name="login">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="loginUsuari" placeholder="Usuari" aria-label="Usuari" required>
+                        <div class="invalid-feedback" id="errorUsuari"></div>
                       </div>
-                      <input type="text" class="form-control" placeholder="Usuari" aria-label="Usuari">
-                    </div>
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        </div>
+                        <input type="password" class="form-control" id="loginPass" placeholder="Contrasenya" aria-label="Contrasenya" required>
+                        <div class="invalid-feedback" id="errorLoginPass"></div>
                       </div>
-                      <input type="text" class="form-control" placeholder="Contrasenya" aria-label="Contrasenya">
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#" target="_blank" class="text-muted pr-4">No recordes l'usuari o contrasenya?</a>
-                    <button type="button" class="btn btn-outline-secondary">Entrar</button>
+                      <div class="modal-footer">
+                        <a href="#" target="_blank" class="text-muted pr-4">No recordes l'usuari o contrasenya?</a>
+                        <button type="submit" class="btn btn-outline-secondary">Entrar</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -79,34 +84,53 @@
                       </button>
                   </div>
                   <div class="modal-body mx-3">
-                    <div class="row">
-                      <div class="col-6 form-group mb-3">
-                        <label for="nom">Nom</label>
-                        <input type="text" class="form-control" name="nom" id="nom">
+                    <form method="POST" action="register.html" id="formRegister" onsubmit="return registerValidator()" name="register">
+                      <div class="form-row">
+                        <div class="col-6 form-group mb-3">
+                          <label for="nom">Nom</label>
+                          <input type="text" class="form-control" name="nom" id="nom">
+                          <div class="invalid-feedback" id="errorNom"></div>
+                        </div>
+                        <div class="col-6 form-group mb-3">
+                          <label for="cognom">Cognom</label>
+                          <input type="text" class="form-control" name="cognom" id="cognom">
+                          <div class="invalid-feedback" id="errorCognom"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3">
+                          <label for="provincia">Provincía</label>
+			                    <select id="provincia" class="form-control">
+                            <option selected value=""></option>
+                            <option>Barcelona</option>
+                            <option>Girona</option>
+                            <option>Tarragona</option>
+                            <option>Lleida</option>
+                          </select>
+			                    <div class="invalid-feedback" id="errorProvincia"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3">
+                          <label for="email">E-mail</label>
+                          <input type="email" class="form-control" name="email" id="email">
+                          <div class="invalid-feedback" id="errorEmail"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3">
+                          <label for="contrasenya">Contrasenya</label>
+                          <input type="password" class="form-control" name="contrasenya" id="contrasenya">
+                          <div class="invalid-feedback" id="errorPass"></div>
+                        </div>
+                        <div class="col-12 form-group mb-3">
+                          <label for="contrasenya2">Repetir contrasenya</label>
+                          <input type="password" class="form-control" name="contrasenya2" id="contrasenya2">
+                          <div class="invalid-feedback" id="errorPass2"></div>
+                        </div>
                       </div>
-                      <div class="col-6 form-group mb-3">
-                        <label for="cognom">Cognom</label>
-                        <input type="text" class="form-control" name="cognom" id="cognom">
+                      <div class="form-check mt-2">
+                        <input type="checkbox" id="acceptTerms" class="form-check-input" required>
+                        <label for="accept-terms" class="form-check-label">Acceptar termes i condicions d'ús</label>
+                        <div class="invalid-feedback" id="errorCheck"></div>
                       </div>
-                      <div class="col-12 form-group mb-3">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email">
-                      </div>
-                      <div class="col-12 form-group mb-3">
-                        <label for="contrasenya">Contrasenya</label>
-                        <input type="password" class="form-control" name="contrasenya" id="contrasenya">
-                      </div>
-                      <div class="col-12 form-group mb-3">
-                        <label for="contrasenya2">Repetir contrasenya</label>
-                        <input type="password" class="form-control" name="contrasenya2" id="contrasenya2">
-                      </div>
+                      <button type="submit" class="btn btn-dark mt-4">Crear</button>
                     </div>
-                    <div class="form-check mt-2">
-                      <input type="checkbox" id="accept-terms" class="form-check-input">
-                      <label for="accept-terms" class="form-check-label">Acceptar termes i condicions d'ús</label>
-                    </div>
-                    <button type="button" class="btn btn-dark mt-4">Crear</button>
-                  </div>
+                  </form>
                   <div class="modal-footer">
                     <a href="#" target="_blank" class="text-muted pr-4">Necessites ajuda?</a>
                     <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel·lar</button>
@@ -146,14 +170,14 @@
                 </button>
               </li>
               <li class="nav-item mx-2 d-none d-lg-block">
-                <div class="input-group border px-1">
-                  <input type="search" placeholder="Buscar..." class="form-control bg-none border-0">
-                  <div class="input-group-append border-0">
-                    <button type="button" class="btn btn-link text-dark">
-                      <i class="fa fa-search"></i>
-                    </button>
+                <form action="#" method="post" class="searchFormValidate" id="searchFormLG" onsubmit="return searchValidator()" name="searchFormLG">
+                  <div class="input-group border px-1">
+                    <input type="search" class="form-control border-0 bg-none" id="searchFormInputLG" minlength="3" placeholder="Buscar..." aria-label="Buscar">
+                    <div class="input-group-append">
+                      <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </li>
               <li class="nav-item mx-2 d-none d-lg-block">
                 <button class="nav-link btn" type="button" data-toggle="modal" data-target="#login-modal">
@@ -819,6 +843,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Arxiu JS propi -->
     <script src="js/validate.js" type="text/javascript"></script>
   </body>
 </html>
