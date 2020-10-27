@@ -22,13 +22,14 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#" class="navbar-brand"><img src="https://via.placeholder.com/180x55?text=LOGO" alt="logo"></a>
-        <form action="#" method="post" class="searchFormValidate" id="searchFormXS" onsubmit="return searchValidator()" name="searchFormXS">
+        <form action="#" method="post" class="searchFormValidate" id="searchFormXS" onsubmit="return searchValidator()" name="searchFormXS" novalidate>
           <div class="input-group border d-lg-none">
             <input type="search" class="form-control border-0" id="searchFormInputXS" minlength="3" placeholder="Buscar..." aria-label="Buscar">
             <div class="input-group-append">
               <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
             </div>
           </div>
+          <div class="invalid-feedback" id="errorSearchXS"></div>
         </form>
         <button class="btn btn-outline-dark d-block d-lg-none" type="button" data-toggle="modal" data-target="#login-modal">
               <i class="far fa-user mr-2"></i>
@@ -45,7 +46,7 @@
                       </button>
                   </div>
                   <div class="modal-body mx-3">
-                    <form method="POST" action="login.html" id="formLogin" onsubmit="return loginValidator()" name="login">
+                    <form method="POST" action="login.html" id="formLogin" onsubmit="return loginValidator()" name="login" novalidate>
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -84,7 +85,7 @@
                       </button>
                   </div>
                   <div class="modal-body mx-3">
-                    <form method="POST" action="register.html" id="formRegister" onsubmit="return registerValidator()" name="register">
+                    <form method="POST" action="register.html" id="formRegister" onsubmit="return registerValidator()" name="register" novalidate>
                       <div class="form-row">
                         <div class="col-6 form-group mb-3">
                           <label for="nom">Nom</label>
@@ -170,13 +171,14 @@
                 </button>
               </li>
               <li class="nav-item mx-2 d-none d-lg-block">
-                <form action="#" method="post" class="searchFormValidate" id="searchFormLG" onsubmit="return searchValidator()" name="searchFormLG">
+                <form action="#" method="post" class="searchFormValidate" id="searchFormLG" onsubmit="return searchValidator()" name="searchFormLG" novalidate>
                   <div class="input-group border px-1">
                     <input type="search" class="form-control border-0 bg-none" id="searchFormInputLG" minlength="3" placeholder="Buscar..." aria-label="Buscar">
                     <div class="input-group-append">
                       <button class="btn btn-link text-dark border-0" type="button"><i class="fa fa-search"></i></button>
                     </div>
                   </div>
+                  <div class="invalid-feedback" id="errorSearchLG"></div>
                 </form>
               </li>
               <li class="nav-item mx-2 d-none d-lg-block">

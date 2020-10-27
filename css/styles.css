@@ -32,10 +32,6 @@ nav li a {
     color: #aaa;
     font-style: italic;
 }
-    .form-control.is-invalid::placeholder {
-        font-size: 0.85rem;
-        color: #ee8f98;
-    }
 
 .form-control:focus, .form-control.is-invalid:focus, .btn:focus {
     box-shadow: none;
@@ -43,6 +39,12 @@ nav li a {
 
 .border-error {
     border: 1px solid #dc3545;
+}
+
+#errorSearchXS, #errorSearchLG {
+    display: inline;
+    max-width: 25%;
+    height: 25px;
 }
 
 section {

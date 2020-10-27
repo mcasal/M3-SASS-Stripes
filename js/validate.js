@@ -1,25 +1,37 @@
+// Si es posa l'atribut novalidate, no salten les validacions en html
+
 /******* SEARCH VALIDATOR *******/
-// El length es controla amb l'atribut d'input minlength="x", en aquest codi només es mirarà si el camp està buit
 
 // Al nostre cas, tenim dos formularis (un per a pantalles petites i l'altre per a pantalles grans). Primer s'ha de seleccionar quin volem validar per a després validar-lo.
+let searchForm;
+let errorSearch;
+
+// Mirem el breakpoint per escollir un dels dos formularis
+if (window.innerWidth <= 991) {
+	searchForm = document.getElementById('searchFormInputXS');
+	errorSearch = document.getElementById('errorSearchXS');
+} else {
+	searchForm = document.getElementById('searchFormInputLG');
+	errorSearch = document.getElementById('errorSearchLG');
+}
+
+let parentElement = searchForm.parentElement; // selecciona l'element pare del input (el div en aquest cas, per a canviar el color del borde)
+
 function searchValidator() {
-	let searchForm;
 	let errors = 0; // es farà servir per retornar true o false a la funció
-
-	// Mirem el breakpoint per escollir un dels dos formularis
-	if (window.innerWidth <= 991) {
-		searchForm = document.getElementById('searchFormInputXS');
-	} else {
-		searchForm = document.getElementById('searchFormInputLG');
-	}
-
-	const parentElement = searchForm.parentElement; // selecciona l'element pare del input (el div en aquest cas, per a canviar el color del borde)
 
 	// Comprovem si el camp està buit
 	if (searchForm.value == ""){
 		searchForm.classList.add('is-invalid');
 		searchForm.style.paddingRight = "0"; // trec el padding-right que porta is-invalid pq es desmunta tot el header
-		searchForm.placeholder = "Escriu alguna cosa!"; // canvia el text del placeholder. Així no es desmunta el header
+		errorSearch.textContent = "Escriu alguna cosa!";
+		parentElement.classList.remove('border');
+		parentElement.classList.add('border-error');
+		errors++;
+	} else if (searchForm.value.length < 3) {
+		searchForm.classList.add("is-invalid");
+		searchForm.style.paddingRight = "0";
+		errorSearch.textContent = "Utilitza almenys 3 caràcters!";
 		parentElement.classList.remove('border');
 		parentElement.classList.add('border-error');
 		errors++;
@@ -30,6 +42,17 @@ function searchValidator() {
 	} else {
 		return true;
 	} // (errors > 0) ? false : true; seria lo mateix
+}
+
+if (searchForm){
+	searchForm.addEventListener('blur', function(event) {
+		if(event.target.value!='') {
+			event.target.classList.remove('is-invalid'); 
+			parentElement.classList.remove('border-error');
+			parentElement.classList.add('border');
+		}
+		return true;
+	});
 }
 
 /******* FORM VALIDATOR per a login *******/
@@ -69,10 +92,12 @@ function loginValidator() {
 }
 
 // Borra tots els camps en vermell (is-invalid) per a quan es torni a omplir cada input on focus
-login.addEventListener('blur', (event) => {
-	console.log(event);
-	if(event.target.value!='') event.target.classList.remove('is-invalid');
-}, true);
+if (login) {
+	login.addEventListener('blur', (event) => {
+		console.log(event);
+		if(event.target.value!='') event.target.classList.remove('is-invalid');
+	}, true);
+}
 
 
 /******* FORM VALIDATOR per a register *******/
@@ -92,6 +117,7 @@ function registerValidator() {
 	let inputRegisterEmail = document.forms["formRegister"]["email"];
 	let inputRegisterPass = document.forms["formRegister"]["contrasenya"];
 	let inputRegisterPass2 = document.forms["formRegister"]["contrasenya2"];
+	let inputTerms = document.forms["formRegister"]["acceptTerms"];
 
 	// INPUT NOM Primer es valida el input del nom per saber si està buit (això amb el required com atribut al html també ho fa), després valida que només hi hagin lletres.
 	if (inputRegisterNom.value == "") {
@@ -165,7 +191,13 @@ function registerValidator() {
 		inputRegisterPass2.classList.add("is-valid");
 	}
 
-	// A les condicions d'ús hi ha un required al input checkbox
+	// A les condicions d'ús hi ha un required al input checkbox. Amb el novalidate no funciona
+	// INPUT CHECKBOX
+	if (!inputTerms.checked) {
+		inputTerms.classList.add("is-invalid");
+		document.getElementById("errorCheck").textContent = "Marca la casella per acceptar les condicions d'ús";
+		errors ++;
+	}
 
 	if (errors > 0) {
 		return false;
@@ -174,10 +206,12 @@ function registerValidator() {
 	}
 }
 
-register.addEventListener('blur', (event) => {
-	console.log(event);
-	if(event.target.value!='') event.target.classList.remove('is-invalid');
-}, true);
+if (register) {
+	register.addEventListener('blur', (event) => {
+		console.log(event);
+		if(event.target.value!='') event.target.classList.remove('is-invalid');
+	}, true);
+}
 
 
 function validar_email(email) {
